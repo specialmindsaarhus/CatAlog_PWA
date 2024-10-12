@@ -58,7 +58,7 @@ import Card from '../components/Card.astro';
 		margin: auto;
 		max-width: 600px; /* Reduced width for mobile focus */
 		color: white;
-		font-size: 18px;
+		font-size: 14px;
 		line-height: 1.5;
 		overflow: hidden;
 		height: 100%;
@@ -84,7 +84,7 @@ import Card from '../components/Card.astro';
 	#fetchContainer {
 		display: flex;
 		flex-direction: column;
-		gap: 1.5rem;
+		gap: 1rem;
 		height: 100%;
 		box-sizing: border-box;
 		opacity: 0;
@@ -137,7 +137,7 @@ import Card from '../components/Card.astro';
 	.text-container {
 		display: flex;
 		flex-direction: column;
-		gap: 20px;
+		gap: 1rem;
 		padding-bottom: 10vh;
 		flex-grow: 1;
 		justify-content: end;
@@ -148,11 +148,13 @@ import Card from '../components/Card.astro';
 		max-width: 34ch; /* Set the maximum width to 50 characters */
   		white-space: nowrap; /* Prevent the text from wrapping */
   		overflow: hidden; /* Hide the overflowed text */
-  		text-overflow: ellipsis; /* Add dots when text overflows */
+		font-weight: 100;
+		text-overflow: ellipsis; /* Add dots when text overflows */
 	}
-
+	
 	.tiny-text {
-		font-size: 0.75rem;
+		font-weight: 300;
+		font-size: 0.65rem;
 		font-weight: 300;
 		margin: 0;
 	}
@@ -163,7 +165,7 @@ import Card from '../components/Card.astro';
 
 	p{
 		margin-top: 0px;
-		margin-bottom: 8px;
+		margin-bottom: 0.5rem;
 	}
 	svg {
 		width: 24px;
