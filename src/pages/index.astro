@@ -1,240 +1,181 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
-//import "../scripts/fetch.js";
-//import '../scripts/motion.js'
-
-
 
 ---
-
 <Layout title="Welcome to Astro.">
 	<main>
-		
 		<div class="mainContainer">
 			<div id="fetchContainer" class="flexColumn main-padding">
-				<p class="text-center">The Cat Congo</p>
-				<div class="relative ">
-					<img src="" alt="" class="fetchImage" id="fetchImage">
+				<p class="text-center tiny-text">The CatAlog</p>
+				<div class="relative">
+					<img src="" alt="Cat Image" class="fetchImage" id="fetchImage">
 					<div class="overlay"></div>
 					<h3 class="race"><span id="fetchText"></span></h3>
 				</div>
-				<p class="text-center tiny-text">The Cat Congo will get you </br>Cats every day all night. </p>
+				<p class="text-center tiny-text">The CatAlog delivers Cats around the clock.</p>
+
 				<div class="text-container">
-					<div class="flexRow">
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
-								<path fill-rule="evenodd" d="M1 6a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3H4a3 3 0 0 1-3-3V6Zm4 1.5a2 2 0 1 1 4 0 2 2 0 0 1-4 0Zm2 3a4 4 0 0 0-3.665 2.395.75.75 0 0 0 .416 1A8.98 8.98 0 0 0 7 14.5a8.98 8.98 0 0 0 3.249-.604.75.75 0 0 0 .416-1.001A4.001 4.001 0 0 0 7 10.5Zm5-3.75a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75Zm0 6.5a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75Zm.75-4a.75.75 0 0 0 0 1.5h2.5a.75.75 0 0 0 0-1.5h-2.5Z" clip-rule="evenodd" />
-							</svg>
-						
-						<div class="flexColumn">
+					<div class="infoRow">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="icon glass-effect">
+							<path fill-rule="evenodd" d="M1 6a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3H4a3 3 0 0 1-3-3V6Zm4 1.5a2 2 0 1 1 4 0 2 2 0 0 1-4 0Zm2 3a4 4 0 0 0-3.665 2.395.75.75 0 0 0 .416 1A8.98 8.98 0 0 0 7 14.5a8.98 8.98 0 0 0 3.249-.604.75.75 0 0 0 .416-1.001A4.001 4.001 0 0 0 7 10.5Zm5-3.75a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75Zm0 6.5a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75Zm.75-4a.75.75 0 0 0 0 1.5h2.5a.75.75 0 0 0 0-1.5h-2.5Z" clip-rule="evenodd"/>
+						</svg>
+						<div class="infoColumn">
 							<p class="text" id="fetchContentOne"></p>
 							<p class="tiny-text">/Temperament</p>
 						</div>
 					</div>
-					<div class="flexRow">
-						<svg style="margin-top:4px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-4">
-							<path fill-rule="evenodd" d="M2 3a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H2Zm0 4.5h16l-.811 7.71a2 2 0 0 1-1.99 1.79H4.802a2 2 0 0 1-1.99-1.79L2 7.5ZM10 9a.75.75 0 0 1 .75.75v2.546l.943-1.048a.75.75 0 1 1 1.114 1.004l-2.25 2.5a.75.75 0 0 1-1.114 0l-2.25-2.5a.75.75 0 1 1 1.114-1.004l.943 1.048V9.75A.75.75 0 0 1 10 9Z" clip-rule="evenodd" />
-						  </svg>						  
-						<div class="flexColumn">
+					<div class="infoRow">
+						<svg style="margin-top:4px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="icon glass-effect">
+							<path fill-rule="evenodd" d="M2 3a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H2Zm0 4.5h16l-.811 7.71a2 2 0 0 1-1.99 1.79H4.802a2 2 0 0 1-1.99-1.79L2 7.5ZM10 9a.75.75 0 0 1 .75.75v2.546l.943-1.048a.75.75 0 1 1 1.114 1.004l-2.25 2.5a.75.75 0 0 1-1.114 0l-2.25-2.5a.75.75 0 1 1 1.114-1.004l.943 1.048V9.75A.75.75 0 0 1 10 9Z" clip-rule="evenodd"/>
+						</svg>
+						<div class="infoColumn">
 							<p class="text" id="fetchContentTwo"></p>
 							<p class="tiny-text">/Origin</p>
 						</div>
 					</div>
-					<div class="flexRow">
-						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
-							<path d="M11.983 1.907a.75.75 0 0 0-1.292-.657l-8.5 9.5A.75.75 0 0 0 2.75 12h6.572l-1.305 6.093a.75.75 0 0 0 1.292.657l8.5-9.5A.75.75 0 0 0 17.25 8h-6.572l1.305-6.093Z" />
-						  </svg>						  
-						<div class="flexColumn">
-							<p class="text" id="fetchContentThree"></p>
+					<div class="infoRow">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="icon glass-effect">
+							<path d="M11.983 1.907a.75.75 0 0 0-1.292-.657l-8.5 9.5A.75.75 0 0 0 2.75 12h6.572l-1.305 6.093a.75.75 0 0 0 1.292.657l8.5-9.5A.75.75 0 0 0 17.25 8h-6.572l1.305-6.093Z"/>
+						</svg>
+						<div class="infoColumn">
+							<p> <span class="text" id="fetchContentThree"></span> / 5</p>
 							<p class="tiny-text">/Energy level</p>
 						</div>
 					</div>
 				</div>
-				<button id="newCat" class="new-cat"><h3>New</h3></button>
+				<button id="newCat" class="new-cat glass-effect"><h3>New Cat</h3></button>
 			</div>
 		</div>
 	</main>
 </Layout>
 
 <style>
-	body{
+	body {
 		width: 100vw;
 	}
 	main {
 		margin: auto;
-		max-width: 1200px;
+		max-width: 600px; /* Reduced width for mobile focus */
 		color: white;
-		font-size: 20px;
-		line-height: 1.6;
+		font-size: 18px;
+		line-height: 1.5;
 		overflow: hidden;
+		height: 100%;
+		box-sizing: border-box;
 	}
 	
-	.mainContainer{
+	.mainContainer {
 		display: flex;
 		align-items: center;
 		height: 100%;
 	}
 	
-	.main-padding{
-
-		padding-inline: 2rem;
-		padding-top: 2rem;
+	.main-padding {
+		padding: 1.5rem;
+	}
+	
+	#fetchContainer {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+		height: 100%;
+		box-sizing: border-box;
 	}
 
+	.relative {
+		position: relative;
+	}
 
-	#fetchContainer{
+	#fetchImage {
+		width: 100%;
+		aspect-ratio: 4 / 3; /* Better for mobile */
+		object-fit: cover;
+		object-position: center;
+		margin: 0 auto;
+		border-radius: 16px;
+		box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.2);
+	}
+
+	.overlay {
+		position: absolute;
+		width: 100%;
+		background: linear-gradient(316deg, rgba(80, 65, 65, 0.76), transparent);
+		border-radius: 16px;
+		top: 0;
+		bottom: 6px;
+	}
+
+	.race {
+		position: absolute;
+		z-index: 1;
+		bottom: 8px;
+		right: 1.5rem;
+		margin-bottom: 0.75rem;
+	}
+
+	.infoRow {
+		display: flex;
+		flex-direction: row;
+		gap: 16px;
+		align-items: center;
+	}
+
+	.infoColumn {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.text-container {
 		display: flex;
 		flex-direction: column;
 		gap: 20px;
-		height: 100%;
-		
-	}
-	
-	.relative{
-		position: relative;
-	}
-	
-	#fetchImage{
-		width:100%;
-		aspect-ratio: 3/2;
-		object-fit: cover;
-		object-position: center;
-		margin-left: auto;
-		margin-right: auto;
-		border-radius: 20px;
-		box-shadow: 4px 4px 20px 2px rgba(0, 0, 0, 0.212);
-		backdrop-filter: blur(12px);
-	}
-	
-	.overlay{
-		position: absolute;
-		width: 100%;
-		background: linear-gradient(316deg, #504141af, transparent);
-		border-radius: 20px;
-		top:0;
-		bottom:8px;
-	}
-	
-	.race{
-		position: absolute;
-		z-index: 999;
-		bottom: 8px;
-		right: 28px;;
-	}
-	@media (max-width: 1200px) {
-		main{
-			margin: 0px auto;
-		}
-
-		#fetchImage{
-			width:100%;
-		}
-	}
-	
-	.flexRow{
-		display: flex;
-		flex-direction: row;
-		justify-content: baseline;
-		align-content: center;
-		gap: 24px;
-	}
-	
-	.flexColumn{
-		display: flex;
-		flex-direction: column;
-		justify-content: end;
-		align-content: center;
-	}
-
-	.text-container{
-		display: flex;
-		flex-direction: column;
-		gap: 40px;
-		max-width: 100%;
-		justify-content: start;
+		padding-bottom: 10vh;
 		flex-grow: 1;
-		padding-bottom: calc(10vh + 40px);
 		justify-content: end;
 	}
 
-	.text{
+	.text {
 		width: 100%;
-		overflow: hidden;
-	}
-	.tiny-text{
-		font-size: 0.7rem !important;
-		font-weight: 200;
-		margin: none !important;
+		max-width: 34ch; /* Set the maximum width to 50 characters */
+  		white-space: nowrap; /* Prevent the text from wrapping */
+  		overflow: hidden; /* Hide the overflowed text */
+  		text-overflow: ellipsis; /* Add dots when text overflows */
 	}
 
-	.svg-container{
-		background-color: #ff9a9e;
-		
+	.tiny-text {
+		font-size: 0.75rem;
+		font-weight: 300;
+		margin: 0;
 	}
-	svg{ 
-		margin-top: auto !important;
-		margin-bottom: auto !important;
-		width: 24px;
-		height: 24px;
-		padding: 4px;
-		color:  #1d1d21;
-		aspect-ratio: 1;
-		border-radius: 50%;
 
-		
-		background: rgba(255, 255, 255, 0.719);
-		backdrop-filter: blur(12.3px);
-		-webkit-backdrop-filter: blur(12.3px);
-		border: 1px solid rgba(255, 255, 255, 0.64);
+	.text-center{
+		text-align: center;
 	}
 
 	p{
-		font-size: 1rem;
-		text-wrap: nowrap;
-		max-width: 40ch;
-		margin:0px;
+		margin-top: 0px;
+		margin-bottom: 8px;
 	}
-	h3 {
-		font-size: clamp(24px, calc(1rem + 1vw), 24px);
-		font-weight: 700;
-		line-height: 1;
-		margin-bottom: 1em;
-		margin-top: 5vh;
-		text-align: center;
-	}
-	
-	.text-center{
-		text-align: center;
-		margin-left: auto;
-		margin-right: auto;
+	svg {
+		width: 24px;
+		height: 24px;
 	}
 
-	button.new-cat{
+	button.new-cat {
 		position: absolute;
-		bottom: 0px;
-		left: -2rem;
-		right: -2rem;
-		height: 10vh;
-		font-size: clamp(24px, calc(1rem + 1vw), 24px) !important;
-		color:white;
-		
-		/* From https://css.glass */
-background: rgb(96 86 86 / 47%);
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(6.9px);
--webkit-backdrop-filter: blur(6.9px);
-border: 1px solid rgba(165, 145, 145, 0.3);½
-
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: 56px; /* Smaller height for mobile */
+		font-size: 20px;
+		color: white;
+		background: rgba(105, 105, 119, 0.37);
+		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+		border: 0.5px solid rgba(78, 78, 93, 0.6);
 	}
-
-	button > h3{
-		margin: unset !important;
-	}
-	
 </style>
 
 <script>
 	import '../scripts/fetch.js';
 </script>
-
-
