@@ -8,7 +8,7 @@ import Card from '../components/Card.astro';
 		<div class="mainContainer">
 			<div id="fetchContainer" class="flexColumn main-padding">
 				<p class="text-center tiny-text">The CatAlog</p>
-				<div class="relative">
+				<div class="relative image-container">
 					<img src="" alt="Cat Image" class="fetchImage" id="fetchImage">
 					<div class="overlay"></div>
 					<h3 class="race"><span id="fetchText"></span></h3>
@@ -44,9 +44,9 @@ import Card from '../components/Card.astro';
 						</div>
 					</div>
 				</div>
-				<button id="newCat" class="new-cat glass-effect"><h3>New Cat</h3></button>
 			</div>
 		</div>
+		<button id="newCat" class="new-cat glass-effect"><h3>New Cat</h3></button>
 	</main>
 </Layout>
 
@@ -70,6 +70,12 @@ import Card from '../components/Card.astro';
 		align-items: center;
 		height: 100%;
 	}
+
+	.image-container{
+		background: rgba(105, 105, 119, 0.37);
+		border-radius: 20px;
+		min-width: 100%;
+	}
 	
 	.main-padding {
 		padding: 1.5rem;
@@ -81,15 +87,17 @@ import Card from '../components/Card.astro';
 		gap: 1.5rem;
 		height: 100%;
 		box-sizing: border-box;
+		opacity: 0;
 	}
-
+	
 	.relative {
 		position: relative;
 	}
-
+	
 	#fetchImage {
+		aspect-ratio: 4/3 !important; /* Better for mobile */
 		width: 100%;
-		aspect-ratio: 4 / 3; /* Better for mobile */
+		height: 100%;
 		object-fit: cover;
 		object-position: center;
 		margin: 0 auto;
@@ -103,7 +111,7 @@ import Card from '../components/Card.astro';
 		background: linear-gradient(316deg, rgba(80, 65, 65, 0.76), transparent);
 		border-radius: 16px;
 		top: 0;
-		bottom: 6px;
+		bottom: 0;
 	}
 
 	.race {
@@ -164,6 +172,7 @@ import Card from '../components/Card.astro';
 
 	button.new-cat {
 		position: absolute;
+		z-index: 999;
 		bottom: 0;
 		left: 0;
 		right: 0;
