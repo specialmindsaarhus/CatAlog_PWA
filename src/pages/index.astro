@@ -8,31 +8,44 @@ import ButtonComponent from "../components/ButtonComponent.astro";
 <Layout title="Welcome to Astro.">
   <main>
     <div id="fetchContainer" class="flexColumn main-padding">
+      <!-- Indsæt ImageComponent	-->
       <ImageComponent
         src="https://cdn2.thecatapi.com/images/ets_USqdE.jpg"
         alt="Cat Image"
       />
 
+      <!-- 
+		Indsæt tagline
+		brug et <p class="text-center tiny-text"></p>
+		-->
       <p class="text-center tiny-text">
         The CATalog <br />
         Delivers Cats around the clock.
       </p>
 
+      <!-- 
+		Container til ikoner med tekst 
+		Inde i containeren indsæt IconWithText ---
+		Kan se således ud:
+
+			<IconWithText
+          	iconSrc="../../public/icons/pasport.svg"
+          	mainText="Temperament data here"
+          	subText="/Temperament"
+        	/>
+	-->
       <div class="text-container">
         <IconWithText
-          iconPath="M1 6a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3H4a3 3 0 0 1-3-3V6Zm4 1.5a2 2 0 1 1 4 0 2 2 0 0 1-4 0Zm2 3a4 4 0 0 0-3.665 2.395.75.75 0 0 0 .416 1A8.98 8.98 0 0 0 7 14.5a8.98 8.98 0 0 0 3.249-.604.75.75 0 0 0 .416-1.001A4.001 4.001 0 0 0 7 10.5Zm5-3.75a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75Zm0 6.5a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75Zm.75-4a.75.75 0 0 0 0 1.5h2.5a.75.75 0 0 0 0-1.5h-2.5Z"
           iconSrc="../../public/icons/pasport.svg"
           mainText="Temperament data here"
           subText="/Temperament"
         />
         <IconWithText
-          iconPath="M2 3a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H2Zm0 4.5h16l-.811 7.71a2 2 0 0 1-1.99 1.79H4.802a2 2 0 0 1-1.99-1.79L2 7.5ZM10 9a.75.75 0 0 1 .75.75v2.546l.943-1.048a.75.75 0 1 1 1.114 1.004l-2.25 2.5a.75.75 0 0 1-1.114 0l-2.25-2.5a.75.75 0 1 1 1.114-1.004l.943 1.048V9.75A.75.75 0 0 1 10 9Z"
           iconSrc="../../public/icons/box.svg"
           mainText="Origin data here"
           subText="/Origin"
         />
         <IconWithText
-          iconPath="M11.983 1.907a.75.75 0 0 0-1.292-.657l-8.5 9.5A.75.75 0 0 0 2.75 12h6.572l-1.305 6.093a.75.75 0 0 0 1.292.657l8.5-9.5A.75.75 0 0 0 17.25 8h-6.572l1.305-6.093Z"
           iconSrc="../../public/icons/energy.svg"
           mainText="Energy level here"
           subText="/Energy level"
@@ -40,55 +53,9 @@ import ButtonComponent from "../components/ButtonComponent.astro";
       </div>
     </div>
 
-    <ButtonComponent id="newCat" text="New Cat" />
+    <!--	
+		Indsæt ButtonComponent med attribute: text="Din tekst"
+	 -->
+    <ButtonComponent text="New Cat" />
   </main>
 </Layout>
-
-<style>
-  main {
-    margin: auto;
-    max-width: 600px;
-    color: white;
-    font-size: 14px;
-    line-height: 1.5;
-    overflow: hidden;
-    height: 100%;
-    box-sizing: border-box;
-  }
-
-  .main-padding {
-    padding: 0.8rem;
-    padding-bottom: 0px;
-  }
-
-  #fetchContainer {
-    display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
-    height: 100%;
-    box-sizing: border-box;
-    opacity: 0;
-  }
-
-  .text-container {
-    display: flex;
-    flex-direction: column;
-    gap: 1.6rem;
-    padding-bottom: calc(40px + 2rem);
-    flex-grow: 1;
-    justify-content: end;
-  }
-
-  .tiny-text {
-    font-weight: 300;
-    font-size: 0.65rem;
-    margin: 0;
-  }
-
-  .text-center {
-    text-align: center;
-  }
-</style>
-<script>
-  import "../scripts/fetch.js";
-</script>

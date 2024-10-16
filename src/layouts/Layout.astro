@@ -1,68 +1,117 @@
 ---
 interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
-
 ---
-
-
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="manifest" href="/manifest.webmanifest">
-		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-		<meta name="theme-color" content="#000000">
-		<script type="module" src="/src/scripts/sw-register.js"></script>
-		<script src="../scripts/fetch.js" type="text/javascript" defer></script>
+    <meta name="theme-color" content="#000000" />
+    <script type="module" src="/src/scripts/sw-register.js"></script>
+    <script src="../scripts/fetch.js" type="text/javascript" defer></script>
 
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body >
-		<slot />
-	</body>
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
 </html>
 <style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
-	body{
+  :root {
+    --accent: 136, 58, 234;
+    --accent-light: 224, 204, 250;
+    --accent-dark: 49, 10, 101;
+    --accent-gradient: linear-gradient(
+      45deg,
+      rgb(var(--accent)),
+      rgb(var(--accent-light)) 30%,
+      white 60%
+    );
+  }
+  body {
+    font-family: "Poppins", sans-serif;
+    margin: 0px;
+    height: 100svh;
+    display: flex;
+  }
+  html {
+    font-family: system-ui, sans-serif;
+    background: rgb(81, 81, 96);
+    background: radial-gradient(
+      circle,
+      rgba(81, 81, 96, 1) 0%,
+      rgba(17, 17, 18, 1) 81%
+    );
+  }
+  code {
+    font-family:
+      Menlo,
+      Monaco,
+      Lucida Console,
+      Liberation Mono,
+      DejaVu Sans Mono,
+      Bitstream Vera Sans Mono,
+      Courier New,
+      monospace;
+  }
+  main {
+    margin: auto;
+    max-width: 600px;
+    color: white;
+    font-size: 14px;
+    line-height: 1.5;
+    overflow: hidden;
+    height: 100%;
+    box-sizing: border-box;
+  }
 
-		font-family: 'Poppins', sans-serif;
-		margin: 0px;
-		height: 100svh;
-		display: flex;
-	}
-		html {
-		font-family: system-ui, sans-serif;
-		background: rgb(81,81,96);
-background: radial-gradient(circle, rgba(81,81,96,1) 0%, rgba(17,17,18,1) 81%);
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
+  .main-padding {
+    padding: 0.8rem;
+    padding-bottom: 0px;
+  }
+
+  #fetchContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    height: 100%;
+    box-sizing: border-box;
+    opacity: 0;
+  }
+
+  .text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    padding-bottom: calc(40px + 2rem);
+    flex-grow: 1;
+    justify-content: end;
+  }
+
+  .tiny-text {
+    font-weight: 300;
+    font-size: 0.65rem;
+    margin: 0;
+  }
+
+  .text-center {
+    text-align: center;
+  }
 </style>
+<script>
+  import "../scripts/fetch.js";
+</script>
