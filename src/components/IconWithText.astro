@@ -1,16 +1,9 @@
 ---
-const { iconPath, mainText, subText } = Astro.props;
+const { iconSrc, mainText, subText } = Astro.props;
 ---
 
 <div class="infoRow">
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 20 20"
-    fill="currentColor"
-    class="icon glass-effect"
-  >
-    <path fill-rule="evenodd" d={iconPath} clip-rule="evenodd"></path>
-  </svg>
+  <img class="svg-image" src={iconSrc} />
   <div class="infoColumn">
     <p class="text">{mainText}</p>
     <p class="tiny-text">{subText}</p>
@@ -47,8 +40,10 @@ const { iconPath, mainText, subText } = Astro.props;
     margin: 0;
   }
 
-  svg {
+  .svg-image {
     width: 24px;
     height: 24px;
+    object-fit: contain;
+    background: unset;
   }
 </style>
