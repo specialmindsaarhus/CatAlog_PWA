@@ -1,0 +1,21 @@
+---
+const { text, id } = Astro.props;
+---
+
+<button id={id} class="new-cat glass-effect">{text}</button>
+
+<style>
+  button.new-cat {
+    position: absolute;
+    z-index: 999;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    color: white;
+    background: rgba(105, 105, 119, 0.37);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 0.5px solid rgba(78, 78, 93, 0.6);
+    font-size: 14px;
+  }
+</style>

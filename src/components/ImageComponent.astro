@@ -1,0 +1,54 @@
+---
+const { src, alt, id } = Astro.props;
+---
+
+<div class="relative image-container">
+  <img src={src} alt={alt} class="fetchImage" id="fetchImage" />
+  <div class="overlay"></div>
+  <h3 class="race"><span id="fetchText"></span></h3>
+</div>
+
+<style>
+  .relative {
+    position: relative;
+  }
+
+  .image-container {
+    background: rgba(105, 105, 119, 0.37);
+    border-radius: 20px;
+    min-width: 100%;
+  }
+
+  .fetchImage {
+    aspect-ratio: 4/3 !important;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    margin: 0 auto;
+    border-radius: 16px;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .overlay {
+    position: absolute;
+    width: 100%;
+    background: linear-gradient(
+      357deg,
+      rgba(80, 65, 65, 1) 0%,
+      rgba(80, 65, 65, 0.46) 30%,
+      transparent
+    );
+    border-radius: 16px;
+    top: 0;
+    bottom: 0;
+  }
+
+  .race {
+    position: absolute;
+    z-index: 1;
+    bottom: 8px;
+    right: 1.5rem;
+    margin-bottom: 0.2rem;
+  }
+</style>

@@ -1,0 +1,54 @@
+---
+const { iconPath, mainText, subText } = Astro.props;
+---
+
+<div class="infoRow">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 20 20"
+    fill="currentColor"
+    class="icon glass-effect"
+  >
+    <path fill-rule="evenodd" d={iconPath} clip-rule="evenodd"></path>
+  </svg>
+  <div class="infoColumn">
+    <p class="text">{mainText}</p>
+    <p class="tiny-text">{subText}</p>
+  </div>
+</div>
+
+<style>
+  .infoRow {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+  }
+
+  .infoColumn {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .text {
+    width: 100%;
+    max-width: 34ch;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 100;
+    margin-top: 0px;
+    margin-bottom: 0.8rem;
+  }
+
+  .tiny-text {
+    font-weight: 300;
+    font-size: 0.65rem;
+    margin: 0;
+  }
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+</style>
