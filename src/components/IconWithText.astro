@@ -1,11 +1,11 @@
 ---
-const { iconSrc, mainText, subText } = Astro.props;
+const { iconSrc, mainText, subText, id } = Astro.props;
 ---
 
 <div class="infoRow">
   <img class="svg-image" src={iconSrc} />
   <div class="infoColumn">
-    <p class="text">{mainText}</p>
+    <p id={id} class="text">{mainText}</p>
     <p class="tiny-text">{subText}</p>
   </div>
 </div>
