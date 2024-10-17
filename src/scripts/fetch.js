@@ -7,11 +7,11 @@ export function fetchCat() {
     .then((result) => {
       /*
        *
-       * before
+       * Fetching the data
        *        *
        *
        */
-      //set the result for easy use
+      //fetching the data and console.log it - see the result in the console
       let fetchData = result[0];
       let textData = fetchData.breeds[0];
       console.log("fetchData: ", fetchData);
@@ -37,31 +37,43 @@ export function fetchCat() {
        *
        *
        */
-      //get text element one
-      let contentElement = document.getElementById("fetchContentOne");
+      //get breed headline text element
+      let contentElement = document.getElementById("BreedText");
       //set text
-      contentElement.innerHTML = `${fetchData.breeds[0].temperament}`;
+      contentElement.innerHTML = `${textData.name}`;
 
       /*
        *
-       * set the H3
+       * set the p
        *
        *
        */
       //get text element one
-      contentElement = document.getElementById("fetchContentTwo");
+      contentElement = document.getElementById("fetchContentOne");
       //set text
-      contentElement.innerHTML = `${fetchData.breeds[0].origin}`;
+      contentElement.innerHTML = `${textData.temperament}`;
+
       /*
        *
-       * set the H3
+       * set the p
        *
        *
        */
-      //get text element one
+      //get text element two
+      contentElement = document.getElementById("fetchContentTwo");
+      //set text
+      contentElement.innerHTML = `${textData.origin}`;
+
+      /*
+       *
+       * set the p
+       *
+       *
+       */
+      //get text element three
       contentElement = document.getElementById("fetchContentThree");
       //set text
-      contentElement.innerHTML = `${fetchData.breeds[0].energy_level}`;
+      contentElement.innerHTML = `${textData.energy_level}`;
 
       //append the text inside fetchContainer
       //document.getElementById("fetchContainer").prependChild(textElement);
