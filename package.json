@@ -14,5 +14,8 @@
     "astro": "^4.15.9",
     "motion": "^10.18.0",
     "typescript": "^5.6.2"
+  },
+  "devDependencies": {
+    "@vite-pwa/astro": "^0.4.3"
   }
 }
